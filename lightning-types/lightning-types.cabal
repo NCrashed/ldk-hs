@@ -1,0 +1,33 @@
+cabal-version:      3.0
+name:               lightning-types
+version:            0.1.0.0
+-- synopsis:
+-- description:
+license:            MIT
+license-file:       LICENSE
+author:             Matt Corallo, Anton Gushcha
+maintainer:         ncrashed@protonmail.com
+-- copyright:
+category:           Crypto
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+tested-with:
+    GHC == 9.10.1
+
+source-repository head
+  type: git
+  location: https://github.com/NCrashed/ldk-hs
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    hs-source-dirs:   src
+    exposed-modules:
+        LDK.Payment
+    -- other-modules:
+    -- other-extensions:
+    build-depends:    base ^>=4.20
+    default-language: GHC2021
